@@ -13,7 +13,4 @@ WORKDIR /discord-bot
 
 ADD docker-entrypoint.sh /
 
-RUN npm i && \
-    npm run build
-
 CMD [ "/docker-entrypoint.sh" ]
