@@ -2,7 +2,8 @@
   "scripts": {
     "lint": "eslint . --ext .ts",
     "build": "tsc",
-    "watch": "tsc -w"
+    "watch": "tsc -w",
+    "serve": "node dist/index.js"
   },
   "devDependencies": {
     "@types/node": "^14.14",
@@ -13,5 +14,8 @@
   },
   "dependencies": {
     "discord.js": "^12.5"
+  },
+  "engines": {
+    "node": ">=15"
   }
 }
