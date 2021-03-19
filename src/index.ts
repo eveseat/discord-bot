@@ -1,6 +1,6 @@
 import {Client, Message} from "discord.js"
 
-const token: string = process.env.TOKEN;
+const token = process.env.TOKEN;
 
 // todo: lots of stuff kek!
 
