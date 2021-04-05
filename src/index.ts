@@ -1,31 +1,23 @@
-import {Client, Message} from "discord.js"
+import { Client, Message } from "discord.js"
+import { Handler } from "./say";
+import * as log from './lib/console'
 
 const token = process.env.TOKEN;
 
-// todo: lots of stuff kek!
-
 if (token === ``) {
-  console.log(`no discord token found in env. bye!`);
+  log.error(`no discord token found in env. set \`TOKEN\` bye!`);
   process.exit();
 }
 
 const client: Client = new Client();
+const handler: Handler = new Handler();
 
 client.on(`ready`, () => {
-  console.log(`authenticated as ${client.user?.tag}`);
+  log.info(`ready & authenticated as ${client.user?.tag}`);
 });
 
 client.on(`message`, (msg: Message) => {
-  if (!msg.content.startsWith(`!`)) {
-    return;
-  }
-
-  const m = msg.content.substring(1);
-
-  if (m === `ping`) {
-    msg.channel.send('pong!');
-  }
-
+  handler.respond(msg);
 });
 
 client.login(token);
