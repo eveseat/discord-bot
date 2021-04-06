@@ -77,7 +77,7 @@ export const handle = (m: Message): void => {
       break
     }
     default: {
-      const valid = commands.map(e => `\`${e}\``).join(`, `);
+      const valid = commands.map(e => `\`${matcher}${e}\``).join(`, `);
       m.channel.send(`${m.author}, available \`${matcher}\` commands are: ${valid}`);
     }
   }
