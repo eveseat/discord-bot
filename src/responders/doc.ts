@@ -54,7 +54,7 @@ const docs: DocResponse[] = [
   }
 ]
 
-export const matcher = ".docs";
+export const matcher = `.docs`;
 export const handle = (m: Message): void => {
   log.debug(`message from ${m.author.username}. sending a doc related response`);
 
