@@ -52,14 +52,14 @@ const commands: CommandHandler[] = [
       Axios.get(ESI_LOOKUP_URI.replace(`{type_id}`, type_id))
         .then(r => {
           console.log(r.data.name);
-          m.channel.send(`${m.author}, type \`${type_id}\` is a \`${r.data.name}\``);
+          m.channel.send(`${m.author}, type \`${type_id}\` has the name \`${r.data.name}\``);
         }).catch(e => {
           console.log(`an error occured: ${e}`);
           m.channel.send(`${m.author}, an error occured doing a type id lookup.`);
         });
     }
   }
-]
+];
 
 export const matcher = `.sde`;
 export const handle = (m: Message): void => {
