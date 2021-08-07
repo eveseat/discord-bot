@@ -16,7 +16,7 @@
     "axios": "^0.21",
     "chalk": "^4.1",
     "cheerio": "*",
-    "discord.js": "^12.5"
+    "discord.js": "^13"
   },
   "engines": {
     "node": ">=15"

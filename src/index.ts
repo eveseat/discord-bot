@@ -1,4 +1,4 @@
-import { Client, Message } from "discord.js"
+import { Client, Intents, Message } from "discord.js"
 import { Handler } from "./say";
 import * as log from './lib/console'
 
@@ -9,7 +9,12 @@ if (token === ``) {
   process.exit();
 }
 
-const client: Client = new Client();
+const client: Client = new Client({
+  intents: [
+    Intents.FLAGS.GUILDS,
+    Intents.FLAGS.GUILD_MESSAGES,
+  ]
+});
 const handler: Handler = new Handler();
 
 client.on(`ready`, () => {
