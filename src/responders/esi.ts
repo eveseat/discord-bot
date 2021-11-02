@@ -27,6 +27,7 @@ export const handle = (m: Message): void => {
         })
         .catch(e => {
           log.error(`failed to call /status endpoint with error: ${e}`);
+          m.channel.send(`${m.author}, /status endpoint from ESI ended with error: ${e}.`);
         })
       break;
     }
