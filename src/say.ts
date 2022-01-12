@@ -6,6 +6,7 @@ import * as ping from './responders/ping'
 import * as doc from './responders/doc'
 import * as esi from './responders/esi'
 import * as sde from './responders/sde'
+import * as seat from './responders/seat'
 
 export class Handler {
 
@@ -16,6 +17,7 @@ export class Handler {
     this.handlers.push({matcher: doc.matcher, handle: doc.handle}); // documentation
     this.handlers.push({matcher: esi.matcher, handle: esi.handle}); // esi
     this.handlers.push({matcher: sde.matcher, handle: sde.handle}); // sde
+    this.handlers.push({matcher: seat.matcher, handle: seat.handle}); // seat
   }
 
   respond(m: Message): void {
