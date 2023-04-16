@@ -51,6 +51,18 @@ const docs: DocResponse[] = [
   {
     match: `.sso`,
     response: `https://eveseat.github.io/docs/configuration/esi_configuration/`
+  },
+  {
+    match: `.install.docker`,
+    response: `https://eveseat.github.io/docs/installation/docker_installation/`
+  },
+  {
+    match: `.install.manual`,
+    response: `https://eveseat.github.io/docs/installation/manual_installation/`
+  },
+  {
+    match: `.logs`,
+    response: `https://eveseat.github.io/docs/troubleshooting/#checking-log-files`
   }
 ]
 
